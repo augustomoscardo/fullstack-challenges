@@ -1,0 +1,37 @@
+label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--text-body);
+}
+
+input, textarea, select{
+  appearance: none;
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--input-stroke);
+  background-color: var(--input-base);
+  color: var(--text-body);
+  font: var(--body-md-regular);
+  outline: none;
+
+  &::placeholder {
+    color: var(--input-placeholder);
+    font: var(--body-md-regular);
+  }
+
+  /* &:invalid {
+    border: 0.125rem solid var(--danger);
+  } */
+}
+
+textarea {
+  height: 136px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+input[type="date"]:focus-within {
+  border-color: var(--brand-light);
+}
