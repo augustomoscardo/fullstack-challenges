@@ -4,6 +4,30 @@ label {
   color: var(--text-body);
 }
 
+input {
+  &:invalid {
+    border: 0.125rem solid var(--danger);
+  }
+
+  &:not(:focus):valid+.error {
+    display: none;
+  }
+
+  &:required+.error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: var(--text-sm);
+    color: var(--danger);
+    margin-top: 8px;
+
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
 input, textarea, select{
   appearance: none;
   width: 100%;
